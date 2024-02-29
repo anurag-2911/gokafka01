@@ -5,12 +5,14 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
+
 	"github.com/confluentinc/confluent-kafka-go/kafka"
 )
 
 func main() {
 	topic := "my-kafka-topic" // Replace if needed
-	
+	time.Sleep(time.Minute)
 	c, err := kafka.NewConsumer(&kafka.ConfigMap{
 		"bootstrap.servers": "localhost:29092",
 		"group.id":          "my-go-consumer",

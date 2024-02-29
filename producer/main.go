@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
+
 	"github.com/confluentinc/confluent-kafka-go/kafka"
 )
 
 func main() {
 	topic := "my-kafka-topic" // Replace if needed
-
+	time.Sleep(time.Minute)
 	p, err := kafka.NewProducer(&kafka.ConfigMap{"bootstrap.servers": "localhost:29092"})
 	if err != nil {
 		fmt.Printf("Failed to create producer: %s\n", err)
