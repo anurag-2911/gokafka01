@@ -10,7 +10,7 @@ import (
 
 func main() {
 	topic := "my-kafka-topic" // Replace if needed
-
+	
 	c, err := kafka.NewConsumer(&kafka.ConfigMap{
 		"bootstrap.servers": "localhost:29092",
 		"group.id":          "my-go-consumer",

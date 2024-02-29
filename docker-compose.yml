@@ -20,8 +20,12 @@ services:
     build: ./producer
     depends_on:
       - kafka
+    environment:
+      bootstrap.servers: kafka:9092  # Use the service name 'kafka' 
 
   consumer:
     build: ./consumer
     depends_on:
       - kafka
+    environment:
+      bootstrap.servers: kafka:9092  # Use the service name 'kafka' 
