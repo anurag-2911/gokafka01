@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	topic := "my-kafka-topic" // Replace if needed
+	topic := "test-kafka-topic" 
 	time.Sleep(time.Minute)
 	c, err := kafka.NewConsumer(&kafka.ConfigMap{
 		"bootstrap.servers": "localhost:29092",

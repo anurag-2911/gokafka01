@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	topic := "my-kafka-topic" // Replace if needed
+	topic := "test-kafka-topic" // Replace if needed
 	time.Sleep(time.Minute)
 	p, err := kafka.NewProducer(&kafka.ConfigMap{"bootstrap.servers": "localhost:29092"})
 	if err != nil {
